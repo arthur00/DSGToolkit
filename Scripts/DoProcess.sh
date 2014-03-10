@@ -2,7 +2,7 @@
 # Run in the logs collected directory. Combine all the separate log files
 #  and create the analysis CSV file.
 
-TOOLSDIR=/home/radams1/logs.collections/Tools
+TOOLSDIR=/share/opensim/DSGToolkit/Scripts
 
 EXPNAME=$(basename $(pwd))
 

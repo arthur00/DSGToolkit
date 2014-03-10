@@ -202,12 +202,12 @@ ActivityByTime
 
         // add the bucket number to each of the records
         gRecords.ForEveryRecord((r) => {
-            r.bucket = (long)((r.time - minDate) * secondsInDay / (double)resolutionSec);
+            r.bucket = (long)Math.Round (((r.time - minDate) * secondsInDay / (double)resolutionSec));
         } );
 
         long numBuckets = (long)((maxDate - minDate) * secondsInDay / (double)resolutionSec);
         // Add an extra bucket for rounding at the end
-        numBuckets += 1;
+        numBuckets += 2;
 
         // Compute a base time for each bucket
         bucketTimes = new double[numBuckets];
@@ -341,6 +341,11 @@ ActivityByTime
             if (!fieldNames.Contains(fldName))
                 fieldNames.Add(fldName);
             rec.outputFields.Add(fldName, sceneRec.simFPS.ToString());
+
+			fldName = sceneRec.container + " physicsFPS";
+            if (!fieldNames.Contains(fldName))
+                fieldNames.Add(fldName);
+            rec.outputFields.Add(fldName, sceneRec.physicsFPS.ToString());
             
             fldName = sceneRec.container + " physicsTime";
             if (!fieldNames.Contains(fldName))
@@ -427,6 +432,17 @@ ActivityByTime
             if (!fieldNames.Contains(fldName))
                 fieldNames.Add(fldName);
             rec.outputFields.Add(fldName, serverRec.bytesSent.ToString());
+
+			fldName = serverRec.regionName + "cPUPercent";
+            if (!fieldNames.Contains(fldName))
+                fieldNames.Add(fldName);
+            rec.outputFields.Add(fldName, serverRec.cPUPercent.ToString());
+
+			fldName = serverRec.regionName + "processMemory";
+            if (!fieldNames.Contains(fldName))
+                fieldNames.Add(fldName);
+            rec.outputFields.Add(fldName, serverRec.processMemory.ToString());
+
         }
     }
 

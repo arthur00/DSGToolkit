@@ -2,16 +2,19 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ActivityByTime/ActivityByTime.cs">
     <Files>
-      <File FileName="ActivityByTime/ActivityByTime.cs" Line="124" Column="46" />
+      <File FileName="ActivityByTime/ActivityByTime.cs" Line="195" Column="42" />
       <File FileName="LogFileReaders/StatScene.cs" Line="118" Column="32" />
-      <File FileName="LogFileReaders/StatSyncConnector.cs" Line="58" Column="27" />
-      <File FileName="LogFileReaders/StatServer.cs" Line="100" Column="49" />
-      <File FileName="LogFileReaders/LongDate.cs" Line="97" Column="6" />
+      <File FileName="LogFileReaders/StatSyncConnector.cs" Line="123" Column="41" />
+      <File FileName="LogFileReaders/StatServer.cs" Line="101" Column="1" />
+      <File FileName="LogFileReaders/LongDate.cs" Line="96" Column="55" />
+      <File FileName="LogFileReaders/Records.cs" Line="52" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="ActivityByTime" expanded="True" selected="True" />
+          <Node name="ActivityByTime" expanded="True">
+            <Node name="ActivityByTime.cs" selected="True" />
+          </Node>
           <Node name="LogFileReaders" expanded="True" />
         </State>
       </Pad>
